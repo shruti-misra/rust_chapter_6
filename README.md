@@ -24,7 +24,7 @@ A state-tracking schema containing two critical elements:
 * `owner`: A heap-allocated `String` tracking the wallet holder's name.
 * `balance`: An `f64` precise numerical field tracking current funds.
 
-### 3. Core API Methods
+### 3. API Methods
 * `Wallet::new(name: String) -> Self`: An associated constructor function that takes ownership of a configuration string and initializes the account balance to `0.0`.
 * `process_transaction(&mut self, transaction: Transaction)`: The orchestration method. It consumes full ownership of the incoming transaction enum and mutates individual field states safely through pattern matching rules.
 * `process_transfers_withdrawls(&mut self, amt: f64)`: An internal ledger guard that ensures a user cannot overdraft their balance.
@@ -34,7 +34,7 @@ A state-tracking schema containing two critical elements:
 
 ---
 
-## 📊 Expected Output Simulation
+## Expected Output Simulation
 
 When executing the sample simulation inside `main()`, your terminal output will accurately mirror the following financial lifecycle:
 
